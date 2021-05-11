@@ -53,6 +53,8 @@ setup(
         'plone.api>=1.8.4',
         'plone.restapi',
         'plone.app.dexterity',
+        'Products.EasyNewsletter>=5.0.1',
+        'beautifulsoup4',
     ],
     extras_require={
         'test': [
