@@ -5,9 +5,9 @@ name: Plone package
 
 on:
     push:
-        branches: [master]
+        branches: [main]
     pull_request:
-        branches: [master]
+        branches: [main]
 
 jobs:
     build:
@@ -21,9 +21,6 @@ jobs:
                 include:
                   - plone-version: Plone52
                     python-version: 2.7
-                  - plone-version: Plone51
-                    python-version: 2.7
-
 
         steps:
             - uses: actions/checkout@v2
