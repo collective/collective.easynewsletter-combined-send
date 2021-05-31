@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from collective.easynewsletter_combined_send.testing import (
-    COLLECTIVE_EASYNEWSLETTER_COMBINED_SEND_ACCEPTANCE_TESTING  # noqa: E501,
+from collective.easynewsletter_combined_send.testing import (  # noqa: E501,
+    COLLECTIVE_EASYNEWSLETTER_COMBINED_SEND_ACCEPTANCE_TESTING,
 )
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered

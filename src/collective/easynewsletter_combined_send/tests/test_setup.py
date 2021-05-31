@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
-from collective.easynewsletter_combined_send.testing import (
-    COLLECTIVE_EASYNEWSLETTER_COMBINED_SEND_INTEGRATION_TESTING  # noqa: E501,
+from collective.easynewsletter_combined_send.testing import (  # noqa: E501,
+    COLLECTIVE_EASYNEWSLETTER_COMBINED_SEND_INTEGRATION_TESTING,
 )
 from plone import api
 from plone.app.testing import setRoles, TEST_USER_ID
@@ -36,7 +36,8 @@ class TestSetup(unittest.TestCase):
     def test_browserlayer(self):
         """Test that ICollectiveEasynewsletterCombinedSendLayer is registered."""
         from collective.easynewsletter_combined_send.interfaces import (
-            ICollectiveEasynewsletterCombinedSendLayer)
+            ICollectiveEasynewsletterCombinedSendLayer,
+        )
         from plone.browserlayer import utils
         self.assertIn(
             ICollectiveEasynewsletterCombinedSendLayer,
@@ -65,8 +66,9 @@ class TestUninstall(unittest.TestCase):
 
     def test_browserlayer_removed(self):
         """Test that ICollectiveEasynewsletterCombinedSendLayer is removed."""
-        from collective.easynewsletter_combined_send.interfaces import \
-            ICollectiveEasynewsletterCombinedSendLayer
+        from collective.easynewsletter_combined_send.interfaces import (
+            ICollectiveEasynewsletterCombinedSendLayer,
+        )
         from plone.browserlayer import utils
         self.assertNotIn(
             ICollectiveEasynewsletterCombinedSendLayer,
