@@ -10,7 +10,8 @@
     :target: https://pypi.python.org/pypi/collective.easynewsletter_combined_send/
     :alt: Latest Version
 
-.. image:: https://img.shields.io/pypi/pyversions/collective.easynewsletter_combined_send.svg?style=plastic   :alt: Supported - Python Versions
+.. image:: https://img.shields.io/pypi/pyversions/collective.easynewsletter_combined_send.svg?style=plastic   
+    :alt: Supported - Python Versions
 
 
 
