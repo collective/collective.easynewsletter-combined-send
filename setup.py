@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Installer for the collective.easynewsletter_combined_send package."""
+"""Installer for the collective.easynewsletter-combined-send package."""
 
 from setuptools import find_packages, setup
 
@@ -12,8 +12,8 @@ long_description = '\n\n'.join([
 
 
 setup(
-    name='collective.easynewsletter_combined_send',
-    version='1.0a1',
+    name='collective.easynewsletter-combined-send',
+    version='1.0b2',
     description="Extend EasyNewsletter to send languages combined one email.",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
@@ -31,12 +31,12 @@ setup(
     keywords='Python Plone CMS',
     author='Maik Derstappen',
     author_email='md@derico.de',
-    url='https://github.com/collective/collective.easynewsletter_combined_send',
+    url='https://github.com/collective/collective.easynewsletter-combined-send',
     project_urls={
-        'PyPI': 'https://pypi.python.org/pypi/collective.easynewsletter_combined_send',
-        'Source': 'https://github.com/collective/collective.easynewsletter_combined_send',
-        'Tracker': 'https://github.com/collective/collective.easynewsletter_combined_send/issues',
-        # 'Documentation': 'https://collective.easynewsletter_combined_send.readthedocs.io/en/latest/',
+        'PyPI': 'https://pypi.python.org/pypi/collective.easynewsletter-combined-send',
+        'Source': 'https://github.com/collective/collective.easynewsletter-combined-send',
+        'Tracker': 'https://github.com/collective/collective.easynewsletter-combined-send/issues',
+        # 'Documentation': 'https://collective.easynewsletter-combined-send.readthedocs.io/en/latest/',
     },
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),
