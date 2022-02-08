@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-1.1 (unreleased)
-----------------
+1.1a1 (2022-02-08)
+------------------
 
 - Nothing changed yet.
 
