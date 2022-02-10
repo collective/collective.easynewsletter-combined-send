@@ -2,21 +2,21 @@
    If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
    This text does not appear on pypi or github. It is a comment.
 
-.. image:: https://coveralls.io/repos/github/collective/collective.easynewsletter_combined_send/badge.svg?branch=master
-    :target: https://coveralls.io/github/collective/collective.easynewsletter_combined_send?branch=master
+.. image:: https://coveralls.io/repos/github/collective/collective.easynewsletter-combined-send/badge.svg?branch=master
+    :target: https://coveralls.io/github/collective/collective.easynewsletter-combined-send?branch=master
     :alt: Coveralls
 
-.. image:: https://img.shields.io/pypi/v/collective.easynewsletter_combined_send.svg
-    :target: https://pypi.python.org/pypi/collective.easynewsletter_combined_send/
+.. image:: https://img.shields.io/pypi/v/collective.easynewsletter-combined-send.svg
+    :target: https://pypi.python.org/pypi/collective.easynewsletter-combined-send/
     :alt: Latest Version
 
-.. image:: https://img.shields.io/pypi/pyversions/collective.easynewsletter_combined_send.svg?style=plastic   
+.. image:: https://img.shields.io/pypi/pyversions/collective.easynewsletter-combined-send.svg?style=plastic
     :alt: Supported - Python Versions
 
 
 
 =======================================
-collective.easynewsletter_combined_send
+collective.easynewsletter-combined-send
 =======================================
 
 Extend EasyNewsletter to send languages combined one email on top of each other.
@@ -31,14 +31,14 @@ Features
 Installation
 ------------
 
-Install collective.easynewsletter_combined_send by adding it to your buildout::
+Install collective.easynewsletter-combined-send by adding it to your buildout::
 
     [buildout]
 
     ...
 
     eggs =
-        collective.easynewsletter_combined_send
+        collective.easynewsletter-combined-send
 
 
 and then running ``bin/buildout``
@@ -47,8 +47,8 @@ and then running ``bin/buildout``
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/collective.easynewsletter_combined_send/issues
-- Source Code: https://github.com/collective/collective.easynewsletter_combined_send
+- Issue Tracker: https://github.com/collective/collective.easynewsletter-combined-send/issues
+- Source Code: https://github.com/collective/collective.easynewsletter-combined-send
 
 
 Support
