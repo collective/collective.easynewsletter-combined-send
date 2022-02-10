@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.1 (unreleased)
-------------------
+1.1 (2022-02-10)
+----------------
 
 - Improved merging of different language content parts.
   [MrTango]
