@@ -41,7 +41,7 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
     def _merge_content(self, output_html, output_html_part):
         part_soup = BeautifulSoup(output_html_part, "html.parser")
         output_soup = BeautifulSoup(output_html, "html.parser")
-        content_parts = part_soup.select("body > *")
+        content_parts = part_soup.select(".aggregatedContent")
         for part in content_parts:
-            output_soup.body.append(part)
+            output_soup.select(".aggregatedContentSlot")[0].append(part)
         return str(output_soup)

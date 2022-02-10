@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.1 (unreleased)
+------------------
+
+- Improved merging of different language content parts.
+  [MrTango]
+
 
 1.1a2 (unreleased)
 ------------------
