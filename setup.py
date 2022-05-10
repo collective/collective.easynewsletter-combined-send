@@ -3,7 +3,6 @@
 
 from setuptools import find_packages, setup
 
-
 long_description = '\n\n'.join([
     open('README.rst').read(),
     open('CONTRIBUTORS.rst').read(),
@@ -12,7 +11,7 @@ long_description = '\n\n'.join([
 
 
 setup(
-    name='collective.easynewsletter_combined_send',
+    name='collective.easynewsletter-combined-send',
     version='1.1',
     description="Extend EasyNewsletter to send languages combined one email.",
     long_description=long_description,

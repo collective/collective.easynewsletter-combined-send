@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
+import unittest
+
 from collective.easynewsletter_combined_send.testing import (  # noqa: E501,
     COLLECTIVE_EASYNEWSLETTER_COMBINED_SEND_INTEGRATION_TESTING,
 )
 from plone import api
-from plone.app.testing import setRoles, TEST_USER_ID
-
-import unittest
-
+from plone.app.testing import TEST_USER_ID, setRoles
 
 try:
     from Products.CMFPlone.utils import get_installer

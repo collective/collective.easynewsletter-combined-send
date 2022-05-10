@@ -20,6 +20,8 @@ collective.easynewsletter-combined-send
 =======================================
 
 Extend EasyNewsletter to send languages combined one email on top of each other.
+For now it only works well for one lange plus english version as alternative below.
+Because the text of the link is hard wired in the issuedatafetcher.
 
 
 Features

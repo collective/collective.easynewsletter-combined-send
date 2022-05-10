@@ -24,7 +24,6 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
 
         tlm = get_translation_manager(self.issue)
         translations = tlm.get_translations()
-        # context_language = ILanguage(self.issue).get_language()
         for lang, issue in translations.items():
             output_tmpl_id = issue.output_template
             issue_tmpl = issue.restrictedTraverse(str(output_tmpl_id))
@@ -33,15 +32,23 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
                 # only use the real content, for every additional translation
                 # and insert it into body tag of first output_html_part
                 # output_html_part = "test additional languages\n"
-                output_html = self._merge_content(output_html, output_html_part)
+                output_html = self._merge_content(output_html, output_html_part, lang)
             else:
                 output_html = output_html_part
         return output_html
 
-    def _merge_content(self, output_html, output_html_part):
+    def _merge_content(self, output_html, output_html_part, lang):
         part_soup = BeautifulSoup(output_html_part, "html.parser")
         output_soup = BeautifulSoup(output_html, "html.parser")
         content_parts = part_soup.select(".aggregatedContent")
+        anker_link_ref= "#lang_{0}".format(lang)
+        anker_tag_name= "lang_{0}".format(lang)
+        anker_link = output_soup.new_tag("a", href=anker_link_ref)
+        anker_link.string = "english version below"
+        output_soup.select(".enlHeaderContent")[0].insert(0, anker_link)
+        anker_tag = output_soup.new_tag("a")
+        anker_tag["name"] = anker_tag_name
+        output_soup.select(".aggregatedContentSlot")[0].append(anker_tag)
         for part in content_parts:
             output_soup.select(".aggregatedContentSlot")[0].append(part)
         return str(output_soup)

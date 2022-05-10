@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
+import collective.easynewsletter_combined_send
 from plone.app.contenttypes.testing import PLONE_APP_CONTENTTYPES_FIXTURE
 from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
 from plone.app.testing import (
-    applyProfile,
     FunctionalTesting,
     IntegrationTesting,
     PloneSandboxLayer,
+    applyProfile,
 )
 from plone.testing import z2
 from Products.CMFCore.utils import getToolByName
 from zope.configuration import xmlconfig
-
-import collective.easynewsletter_combined_send
 
 
 class CollectiveEasynewsletterCombinedSendLayer(PloneSandboxLayer):

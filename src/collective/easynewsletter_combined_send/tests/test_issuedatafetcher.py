@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import unittest
+
 from App.Common import package_home
 from collective.easynewsletter_combined_send.testing import (
     COLLECTIVE_EASYNEWSLETTER_COMBINED_SEND_FUNCTIONAL_TESTING,
@@ -6,7 +8,7 @@ from collective.easynewsletter_combined_send.testing import (
 from plone import api
 from plone.app.multilingual.api import translate
 from plone.app.multilingual.interfaces import IPloneAppMultilingualInstalled
-from plone.app.testing import setRoles, TEST_USER_ID
+from plone.app.testing import TEST_USER_ID, setRoles
 from plone.app.textfield import RichTextValue
 from plone.registry.interfaces import IRegistry
 from Products.CMFPlone.interfaces.controlpanel import IMailSchema
@@ -16,9 +18,6 @@ from Products.EasyNewsletter.utils.mail import get_portal_mail_settings
 from Products.MailHost.interfaces import IMailHost
 from zope.component import getSiteManager, getUtility
 from zope.interface import alsoProvides
-
-import unittest
-
 
 GLOBALS = globals()
 TESTS_HOME = package_home(GLOBALS)
