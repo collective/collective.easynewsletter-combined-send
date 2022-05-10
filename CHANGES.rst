@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.2 (unreleased)
+1.2 (2022-05-10)
 ----------------
 
 - cleanup and provide a link to alternative language below
