@@ -4,7 +4,7 @@ Changelog
 1.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add CSS class to english_version_below_link
 
 
 1.2 (2022-05-10)

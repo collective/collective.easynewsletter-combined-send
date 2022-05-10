@@ -8,13 +8,12 @@ from zope.interface import implementer
 
 @implementer(IIssueDataFetcher)
 class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
-    """
-    """
+    """ """
 
     def _render_output_html(self, preview=False):
-        """ Return rendered newsletter
-            with header+body+footer with all translations combined (raw html)
-            except when preview=True, than just render current issue.
+        """Return rendered newsletter
+        with header+body+footer with all translations combined (raw html)
+        except when preview=True, than just render current issue.
         """
         output_html = ""
         if preview:
@@ -41,10 +40,11 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
         part_soup = BeautifulSoup(output_html_part, "html.parser")
         output_soup = BeautifulSoup(output_html, "html.parser")
         content_parts = part_soup.select(".aggregatedContent")
-        anker_link_ref= "#lang_{0}".format(lang)
-        anker_tag_name= "lang_{0}".format(lang)
+        anker_link_ref = "#lang_{0}".format(lang)
+        anker_tag_name = "lang_{0}".format(lang)
         anker_link = output_soup.new_tag("a", href=anker_link_ref)
         anker_link.string = "english version below"
+        anker_link["class"] = "english_version_below_link"
         output_soup.select(".enlHeaderContent")[0].insert(0, anker_link)
         anker_tag = output_soup.new_tag("a")
         anker_tag["name"] = anker_tag_name
