@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.3 (unreleased)
+1.3 (2022-05-10)
 ----------------
 
 - Add CSS class to english_version_below_link
