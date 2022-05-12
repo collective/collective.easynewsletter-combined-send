@@ -4,7 +4,7 @@ Changelog
 1.4 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- include complete newsletter, not just aggregated content.
 
 
 1.3 (2022-05-10)

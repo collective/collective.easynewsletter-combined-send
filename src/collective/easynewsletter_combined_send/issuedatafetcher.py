@@ -39,11 +39,11 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
     def _merge_content(self, output_html, output_html_part, lang):
         part_soup = BeautifulSoup(output_html_part, "html.parser")
         output_soup = BeautifulSoup(output_html, "html.parser")
-        content_parts = part_soup.select(".aggregatedContent")
+        content_parts = part_soup.select("#emailBody")
         anker_link_ref = "#lang_{0}".format(lang)
         anker_tag_name = "lang_{0}".format(lang)
         anker_link = output_soup.new_tag("a", href=anker_link_ref)
-        anker_link.string = "english version below"
+        anker_link.string = "> english version below"
         anker_link["class"] = "english_version_below_link"
         output_soup.select(".enlHeaderContent")[0].insert(0, anker_link)
         anker_tag = output_soup.new_tag("a")
