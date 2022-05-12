@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.4 (unreleased)
+1.4 (2022-05-12)
 ----------------
 
 - include complete newsletter, not just aggregated content.
