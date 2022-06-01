@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
+from collective.easynewsletter_combined_send import _
+from plone import api
 from plone.app.multilingual.api import get_translation_manager
 from Products.EasyNewsletter.interfaces import IIssueDataFetcher
 from Products.EasyNewsletter.issuedatafetcher import DefaultDXIssueDataFetcher
@@ -20,10 +22,13 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
             output_tmpl_id = self.issue.output_template
             issue_tmpl = self.issue.restrictedTraverse(str(output_tmpl_id))
             return issue_tmpl.render()
-
+        current_lang = api.portal.get_current_language()
         tlm = get_translation_manager(self.issue)
         translations = tlm.get_translations()
-        for lang, issue in translations.items():
+        languages = [lang for lang in translations.keys() if lang != current_lang]
+        languages.insert(0, current_lang)
+        for lang in languages:
+            issue = translations.get(lang)
             output_tmpl_id = issue.output_template
             issue_tmpl = issue.restrictedTraverse(str(output_tmpl_id))
             output_html_part = issue_tmpl.render()
@@ -45,7 +50,8 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
         anker_link_wrapper = output_soup.new_tag("p")
         anker_link_wrapper.string = "> "
         anker_link = output_soup.new_tag("a", href=anker_link_ref)
-        anker_link.string = "english version below"
+        anker_link_text = _("other version below")
+        anker_link.string = api.portal.translate(anker_link_text, lang=lang)
         anker_link["class"] = "english_version_below_link"
         anker_link_wrapper.append(anker_link)
         output_soup.select(".enlHeaderContent")[0].insert(0, anker_link_wrapper)
@@ -53,5 +59,5 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
         anker_tag["name"] = anker_tag_name
         output_soup.select(".aggregatedContentSlot")[0].append(anker_tag)
         for part in content_parts:
-            output_soup.select(".aggregatedContentSlot")[0].append(part)
+            output_soup.select("#emailBody")[0].insert_after(part)
         return str(output_soup)
