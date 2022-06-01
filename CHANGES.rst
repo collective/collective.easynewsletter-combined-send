@@ -4,7 +4,7 @@ Changelog
 1.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- optimize english version below link
 
 
 1.4 (2022-05-12)
