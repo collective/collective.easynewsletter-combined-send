@@ -1,10 +1,10 @@
 Changelog
 =========
 
-1.6 (unreleased)
+1.5.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- preserve lang order
 
 
 1.5 (2022-06-01)
