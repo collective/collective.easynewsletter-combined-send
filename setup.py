@@ -12,7 +12,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='collective.easynewsletter-combined-send',
-    version='1.5.4',
+    version='1.5.5.dev0',
     description="Extend EasyNewsletter to send languages combined one email.",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
