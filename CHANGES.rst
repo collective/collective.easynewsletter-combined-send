@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.5.3 (unreleased)
+1.5.3 (2022-06-03)
 ------------------
 
 - fix html entity &nbsp; being visible
