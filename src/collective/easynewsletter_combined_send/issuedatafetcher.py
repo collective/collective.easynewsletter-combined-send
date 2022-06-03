@@ -31,6 +31,8 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
             issue = translations.get(lang)
             output_tmpl_id = issue.output_template
             issue.REQUEST.set('LANGUAGE', lang)
+            issue.REQUEST.set("I18N_LANGUAGE", lang)
+            issue.REQUEST.set("HTTP_ACCEPT_LANGUAGE", lang)
             issue_tmpl = issue.restrictedTraverse(str(output_tmpl_id))
             output_html_part = issue_tmpl.render()
             if output_html:
