@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.5.2 (unreleased)
+1.5.2 (2022-06-03)
 ------------------
 
 - optimize merging of content
