@@ -4,7 +4,7 @@ Changelog
 1.5.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- fix linebreaking in english version below link
 
 
 1.5.3 (2022-06-03)

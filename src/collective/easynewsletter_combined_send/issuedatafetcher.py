@@ -51,6 +51,7 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
         anker_tag_name = "lang_{0}".format(lang)
         anker_link_wrapper = output_soup.new_tag("p")
         anker_link_wrapper.string = ">"
+        anker_link_wrapper["style"] = "white-space:nowrap;"
         anker_link = output_soup.new_tag("a", href=anker_link_ref)
         anker_link_text = _("other version below")
         anker_link.string = api.portal.translate(anker_link_text, lang=lang)
