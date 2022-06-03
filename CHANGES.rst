@@ -4,7 +4,8 @@ Changelog
 1.5.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- optimize merging of content
+- fixing linebreak in english version below link
 
 
 1.5.1 (2022-06-01)

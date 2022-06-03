@@ -45,10 +45,12 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
         part_soup = BeautifulSoup(output_html_part, "html.parser")
         output_soup = BeautifulSoup(output_html, "html.parser")
         content_parts = part_soup.select("#emailBody")
+
+        # add anker link
         anker_link_ref = "#lang_{0}".format(lang)
         anker_tag_name = "lang_{0}".format(lang)
         anker_link_wrapper = output_soup.new_tag("p")
-        anker_link_wrapper.string = "> "
+        anker_link_wrapper.string = ">&nbsp;"
         anker_link = output_soup.new_tag("a", href=anker_link_ref)
         anker_link_text = _("other version below")
         anker_link.string = api.portal.translate(anker_link_text, lang=lang)
@@ -58,6 +60,7 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
         anker_tag = output_soup.new_tag("a")
         anker_tag["name"] = anker_tag_name
         output_soup.select(".aggregatedContentSlot")[0].append(anker_tag)
+
         for part in content_parts:
             output_soup.select("#emailBody")[0].insert_after(part)
         return str(output_soup)
