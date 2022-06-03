@@ -52,10 +52,10 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
         anker_link_wrapper = output_soup.new_tag("p")
         anker_link_wrapper.string = ">"
         anker_link_wrapper["style"] = "white-space:nowrap;"
+        anker_link_wrapper["class"] = "english_version_below_link"
         anker_link = output_soup.new_tag("a", href=anker_link_ref)
         anker_link_text = _("other version below")
         anker_link.string = api.portal.translate(anker_link_text, lang=lang)
-        anker_link["class"] = "english_version_below_link"
         anker_link["style"] = "margin-left:5px;"
         anker_link_wrapper.append(anker_link)
         output_soup.select(".enlHeaderContent")[0].insert(0, anker_link_wrapper)
