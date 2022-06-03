@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.5.4 (unreleased)
+1.5.4 (2022-06-03)
 ------------------
 
 - fix linebreaking in english version below link

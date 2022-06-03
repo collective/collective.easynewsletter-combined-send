@@ -58,6 +58,7 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
         anker_link["class"] = "english_version_below_link"
         anker_link["style"] = "margin-left:5px;"
         anker_link_wrapper.append(anker_link)
+        print(anker_link_wrapper)
         output_soup.select(".enlHeaderContent")[0].insert(0, anker_link_wrapper)
         anker_tag = output_soup.new_tag("a")
         anker_tag["name"] = anker_tag_name
