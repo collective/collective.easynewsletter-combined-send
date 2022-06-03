@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.5.5 (unreleased)
+1.5.5 (2022-06-03)
 ------------------
 
 - Move english_version_below_link class to anker_link_wrapper
