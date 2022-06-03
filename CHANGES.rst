@@ -4,7 +4,7 @@ Changelog
 1.5.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix translation of secondary languages
 
 
 1.5.5 (2022-06-03)

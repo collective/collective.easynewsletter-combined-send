@@ -30,6 +30,7 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
         for lang in languages:
             issue = translations.get(lang)
             output_tmpl_id = issue.output_template
+            issue.REQUEST.set('LANGUAGE', lang)
             issue_tmpl = issue.restrictedTraverse(str(output_tmpl_id))
             output_html_part = issue_tmpl.render()
             if output_html:
