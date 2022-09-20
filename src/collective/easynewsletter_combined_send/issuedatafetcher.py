@@ -61,7 +61,9 @@ class CombindSendDXIssueDataFetcher(DefaultDXIssueDataFetcher):
         anker_link.string = api.portal.translate(anker_link_text, lang=lang)
         anker_link["style"] = "margin-left:5px;"
         anker_link_wrapper.append(anker_link)
-        output_soup.select(".enlHeaderContent")[0].insert(0, anker_link_wrapper)
+        enl_header = output_soup.select(".enlHeaderContent")
+        if enl_header:
+            enl_header[0].insert(0, anker_link_wrapper)
         anker_tag = output_soup.new_tag("a")
         anker_tag["name"] = anker_tag_name
         output_soup.select(".aggregatedContentSlot")[0].append(anker_tag)
